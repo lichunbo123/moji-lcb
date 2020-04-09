@@ -44,6 +44,10 @@ public class GuidePageAdapter extends PagerAdapter {
         return view == object;
     }
 
+    public void  as(){
+
+    }
+
     /**
      * 初始化position位置的界面
      * @param container
