@@ -188,7 +188,7 @@ public class DropsDetailActivity extends AppCompatActivity implements ViewPager.
             public void run() {
                 if(DetermineConnServer.isConnByHttp(getApplicationContext())){
                     try {
-                        URL url = new URL("http://"+ip+":8080/MoJi/AddCommentServlet?noteId="+note.getNoteId()+"&userId="+data.getUser().getUserId()+"&commentContent="+content);
+                        URL url = new URL("http://"+ip+":8080/MoJi/comment/add?noteId="+note.getNoteId()+"&userId="+data.getUser().getUserId()+"&commentContent="+content);
                         URLConnection conn = url.openConnection();
                         InputStream in = conn.getInputStream();
                         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
@@ -234,7 +234,7 @@ public class DropsDetailActivity extends AppCompatActivity implements ViewPager.
                 if(DetermineConnServer.isConnByHttp(getApplicationContext())){
                     try {
                         List<Comment> list = new ArrayList<>();
-                        URL url = new URL("http://"+ip+":8080/MoJi/ShowCommentServlet?noteId="+note.getNoteId());
+                        URL url = new URL("http://"+ip+":8080/MoJi/comment/list?noteId="+note.getNoteId());
                         URLConnection conn = url.openConnection();
                         InputStream in = conn.getInputStream();
                         BufferedReader reader = new BufferedReader(new InputStreamReader(in));

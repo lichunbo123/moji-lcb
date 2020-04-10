@@ -122,7 +122,7 @@ public class ChangePwdActivity extends AppCompatActivity {
             public void run() {
                 try {
                     if(DetermineConnServer.isConnByHttp(getApplicationContext())) {
-                        URL url = new URL("http://" + ip + ":8080/MoJi/ChangeUserPwdServlet?newPwd=" + newPwd.getText().toString() + "&userId=" + data.getUser().getUserId());
+                        URL url = new URL("http://" + ip + ":8080/MoJi/user/changePwd?newPwd=" + newPwd.getText().toString() + "&userId=" + data.getUser().getUserId());
                         URLConnection conn = url.openConnection();
                         InputStream in = conn.getInputStream();
                         BufferedReader reader = new BufferedReader(new InputStreamReader(in, "utf-8"));

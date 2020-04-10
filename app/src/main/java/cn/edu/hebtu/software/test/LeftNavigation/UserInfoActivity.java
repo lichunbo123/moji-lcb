@@ -269,7 +269,7 @@ public class UserInfoActivity extends AppCompatActivity {
                     }
 
                     UploadUserMsg task = new UploadUserMsg(getApplicationContext(), user, is);
-                    task.execute("http://"+ ip +":8080/MoJi/ChangeUserMsgServlet");//10.7.89.1  ; WIFI 192.168.137.1
+                    task.execute("http://"+ ip +":8080/MoJi/user/changeMsg");//10.7.89.1  ; WIFI 192.168.137.1
 
                     break;
             }

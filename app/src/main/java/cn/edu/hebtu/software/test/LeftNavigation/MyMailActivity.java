@@ -132,7 +132,7 @@ public class MyMailActivity extends AppCompatActivity {
                 try {
                     if(DetermineConnServer.isConnByHttp(getApplicationContext())) {
                         List<Mail> list = new ArrayList<>();
-                        URL url = new URL("http://" + ip + ":8080/MoJi/QueryMailServlet?userId=" + data.getUser().getUserId());
+                        URL url = new URL("http://" + ip + ":8080/MoJi/mail/list?userId=" + data.getUser().getUserId());
                         URLConnection conn = url.openConnection();
                         InputStream in = conn.getInputStream();
                         BufferedReader reader = new BufferedReader(new InputStreamReader(in, "utf-8"));

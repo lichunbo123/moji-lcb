@@ -163,7 +163,7 @@ public class MileageFragment extends Fragment {
             try {
                 boolean b = DetermineConnServer.isConnByHttp(getActivity().getApplicationContext());
                 if(b){
-                    URL url = new URL("http://"+getResources().getString(R.string.internet_ip)+":8080/MoJi/DownloadNoteServlet?userId=" + data.getUser().getUserId());
+                    URL url = new URL("http://"+getResources().getString(R.string.internet_ip)+":8080/MoJi/note/download?userId=" + data.getUser().getUserId());
                     URLConnection conn = url.openConnection();
                     InputStream in = conn.getInputStream();
                     BufferedReader reader = new BufferedReader(new InputStreamReader(in,"utf-8"));

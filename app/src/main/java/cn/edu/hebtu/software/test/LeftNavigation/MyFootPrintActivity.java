@@ -113,7 +113,7 @@ public class MyFootPrintActivity extends AppCompatActivity {
             try {
                 boolean b = DetermineConnServer.isConnByHttp(getApplicationContext());
                 if(b){
-                    URL url = new URL("http://"+getResources().getString(R.string.internet_ip)+":8080/MoJi/DownloadNoteServlet?userId=" + userId);
+                    URL url = new URL("http://"+getResources().getString(R.string.internet_ip)+":8080/MoJi/note/download?userId=" + userId);
                     URLConnection conn = url.openConnection();
                     InputStream in = conn.getInputStream();
                     BufferedReader reader = new BufferedReader(new InputStreamReader(in,"utf-8"));

@@ -203,7 +203,7 @@ public class LoginInActivity extends AppCompatActivity implements View.OnClickLi
                     Message msg = Message.obtain();
                     if(DetermineConnServer.isConnByHttp(LoginInActivity.this)){
                         User threadUser = new User();
-                        URL url = new URL("http://" + ip + ":8080/MoJi/loginUserServlet?phone=" + phone + "&password=" + pwd);
+                        URL url = new URL("http://" + ip + ":8080/MoJi/user/login?phone=" + phone + "&password=" + pwd);
                         URLConnection conn = url.openConnection();
                         InputStream in = conn.getInputStream();
                         BufferedReader reader = new BufferedReader(new InputStreamReader(in, "utf-8"));

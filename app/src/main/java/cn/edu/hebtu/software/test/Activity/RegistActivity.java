@@ -169,7 +169,7 @@ public class RegistActivity extends AppCompatActivity {
             public void run() {
                 try {
                     if(DetermineConnServer.isConnByHttp(getApplicationContext())) {
-                        URL url = new URL("http://" + ip + ":8080/MoJi/RegistUserServlet?phone=" + edtTel.getText().toString() + "&password=" + edtPwd.getText().toString());
+                        URL url = new URL("http://" + ip + ":8080/MoJi/user/rigest?phone=" + edtTel.getText().toString() + "&password=" + edtPwd.getText().toString());
                         URLConnection conn = url.openConnection();
                         InputStream in = conn.getInputStream();
                         BufferedReader reader = new BufferedReader(new InputStreamReader(in, "utf-8"));
