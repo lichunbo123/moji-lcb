@@ -16,8 +16,6 @@ import java.util.List;
  * @time 2019/11/12 15:08
  */
 public class Note implements Parcelable{
-    private User user;
-    private List<String> imgList = new ArrayList<>();
     private String noteId;
     private Double latitude;
     private Double longitude;
@@ -27,6 +25,8 @@ public class Note implements Parcelable{
     private String userId;
     private String time;
     private int self;
+    private User user;
+    private List<String> imgList = new ArrayList<>();
 
     public Note(){
 

@@ -10,12 +10,12 @@ package cn.edu.hebtu.software.test.Data;
  * @time 2019/11/28 11:49
  */
 public class Comment {
-    private User user;
     private String id;
     private String noteId;
     private String userName;
     private String commentContent;
     private String commentTime;
+    private User user;
 
     public Comment(){
 
